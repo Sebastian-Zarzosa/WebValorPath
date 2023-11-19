@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Pagina principal</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="fotos/Rectangle 2.png" alt="Logo">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Buscar...">
+                <button type="button">Buscar</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Configuraciones</button>
+                <div class="dropdown-content">
+                    <a href="perfil.html">Perfil</a>
+                    <a href="#">Configuración</a>
+                    <a href="index.html">Cerrar Sesión</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Contenido de la página -->
+    <div class="circle-container">
+        <div class="circle">
+            <img src="fotos/calendar_30000.png" alt="Imagen 1">
+            <h3>Calendario</h3>
+        </div>
+        <div class="circle">
+            <img src="fotos/reunion.png" alt="Imagen 2">
+            <h3>Reuniones</h3>
+        </div>
+        <div class="circle">
+            <img src="fotos/activ.png" alt="Imagen 3">
+            <h3>Actividades</h3>
+        </div>
+        <div class="circle">
+            <img src="imagen4.jpg" alt="Imagen 4">
+            <h3>Título 4</h3>
+        </div>
+        <div class="circle">
+            <img src="imagen5.jpg" alt="Imagen 5">
+            <h3>Título 5</h3>
+        </div>
+        <p></p>
+    </div>
+    <p></p>
+    <div class="container">
+        <div class="contact-box">
+            <div class="containere">
+                <h1>CONTACTOS</h1>
+                <div class="contact">
+                    <img src="fotos/Testimonio1.jpg" alt="Contacto 1">
+                    <h2> Mario Alvarez</h2>
+                    <div class="contact-details">
+                        <!-- Detalles completos del contacto 1 -->
+                        <p>Descripción breve del contacto 1.</p>
+                        <p>Nombre: Nombre completo del contacto 1</p>
+                        <p>Correo electrónico: correo@contacto1.com</p>
+                        <p>Teléfono: 123-456-7890</p>
+                    </div>
+                </div>
+        
+                <div class="contact">
+                    <img src="fotos/Testimonio2.jpg" alt="Contacto 2">
+                    <h2>Vanesa Rios</h2>
+                    
+                    <div class="contact-details">
+                        <!-- Detalles completos del contacto 2 -->
+                        <p>Descripción breve del contacto 2.</p>
+                        <p>Nombre: Nombre completo del contacto 2</p>
+                        <p>Correo electrónico: correo@contacto2.com</p>
+                        <p>Teléfono: 987-654-3210</p>
+                    </div>
+                </div>
+        
+                <div class="contact">
+                    <img src="fotos/Testimonio3.jpg" alt="Contacto 3">
+                    <h2>Marcos Lopez</h2>
+                    <Br>    </Br>
+                    <div class="contact-details">
+                        <!-- Detalles completos del contacto 3 -->
+                        <P></P>
+                        <p>Descripción breve del contacto 3.</p>
+                        <p>Nombre: Nombre completo del contacto 3</p>
+                        <p>Correo electrónico: correo@contacto3.com</p>
+                        <p>Teléfono: 555-555-5555</p>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                const contacts = document.querySelectorAll('.contact');
+                contacts.forEach(contact => {
+                    contact.addEventListener('mouseover', () => {
+                        const details = contact.querySelector('.contact-details');
+                        details.style.display = 'block';
+                    });
+                    contact.addEventListener('mouseout', () => {
+                        const details = contact.querySelector('.contact-details');
+                        details.style.display = 'none';
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="evento">
+            <h1>PROXIMOS EVENTOS</h1>
+            
+            <!-- Evento 1 -->
+            <div class="evento-item">
+                <h2>Reunion de Bienvenida</h2>
+                <p>Reunion para formar equipos de trabajo y presentarse entre sus compañeros </p>
+                <button class="boton meInteresa">Me gusta</button>
+                <button class="boton noMeInteresa">No me gusta</button>
+            </div>
+        
+            <!-- Evento 2 -->
+            <div class="evento-item">
+                <h2>Entrevistas con especialistas</h2>
+                <p>Descripción del evento 2 y detalles...</p>
+                <button class="boton meInteresa">Me gusta</button>
+                <button class="boton noMeInteresa">No me gusta</button>
+            </div>
+        
+            <!-- Evento 3 -->
+            <div class="evento-item">
+                <h2>Presentacion de tareas</h2>
+                <p>Descripción del evento 3 y detalles</p>
+                <button class="boton meInteresa">Me gusta</button>
+                <button class="boton noMeInteresa">No me gusta</button>
+            </div>
+            <!-- Evento 4 -->
+            <div class="evento-item">
+                <h2>Charla Grupal</h2>
+                <p>Descripción del evento 1 y detalles...</p>
+                <button class="boton meInteresa">Me gusta</button>
+                <button class="boton noMeInteresa">No me gusta</button>
+            </div>
+        </div>
+        
+        <script>
+            const eventoItems = document.querySelectorAll('.evento-item');
+        
+            eventoItems.forEach(eventoItem => {
+                const descripcionEvento = eventoItem.querySelector('p');
+                const meInteresaButton = eventoItem.querySelector('.meInteresa');
+                const noMeInteresaButton = eventoItem.querySelector('.noMeInteresa');
+        
+                // Función para mostrar detalles del evento
+                eventoItem.addEventListener('mouseover', () => {
+                    descripcionEvento.style.display = 'block';
+                    meInteresaButton.style.display = 'block';
+                    noMeInteresaButton.style.display = 'block';
+                });
+        
+                // Función para ocultar detalles del evento
+                eventoItem.addEventListener('mouseout', () => {
+                    descripcionEvento.style.display = 'none';
+                    meInteresaButton.style.display = 'none';
+                    noMeInteresaButton.style.display = 'none';
+                });
+            });
+        </script>
+    </div>
+    <p></p>
+    <footer>
+        <div class="containerfooter">
+            <div class="row">
+                <div class="col" id="company">
+                    <p></p>
+                    <img src="fotos/Rectangle 2.png" alt="" class="logo">
+                    <div class="social">
+                        <a href="https://www.facebook.com/yumicomiranda.brturenchavez?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/miranda_barturen/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCJWSW-zyEZMmzAozcLeSFoQ"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/qr/EL6GU2YL3LRLE1 "><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col" id="services">
+                    <h3>Servicios</h3>
+                    <div class="links">
+                        <a href="#">Comunidades</a>
+                        <a href="#">Medicos Profesionales</a>
+                        <a href="#">Asesoramiento laboral</a>
+                        <a href="#">Recursos para veteranos</a>
+                    </div>
+                </div>
+
+                <div class="col" id="useful-links">
+                    <h3>Enlaces útiles</h3>
+                    <div class="links">
+                        <a href="#">Acerca de nosotros</a>
+                        <a href="#">Contáctanos</a>
+                        <a href="#">Términos y condiciones</a>
+                        <a href="#">Política de privacidad</a>
+                    </div>
+                </div>
+
+                <div class="col" id="useful-links">
+                    <h3>Contactanos</h3>
+                    <div class="links">
+                        <a href="#">Telefono</a>
+                        <a href="#">Ubicanos </a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p></p>
+    </footer>
+</body>
+</body>
+</html>

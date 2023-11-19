@@ -1,0 +1,399 @@
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los círculos se envuelvan en pantallas pequeñas */
+}
+ html{
+    background-color: #12203A;
+ }
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5b236;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin: 10px; /* Espacio entre círculos */
+}
+
+.circle:hover {
+    background-color: #495881;
+}
+
+.circle img {
+    max-width: 63px;
+    max-height: 63px;
+}
+
+.circle h3 {
+    margin-top: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .circle-container {
+        flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+    }
+}
+header {
+    background-color: #12203A;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logo */
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilos para la barra de búsqueda */
+.search input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search button {
+    padding: 5px 10px;
+    background-color: #f5b236;
+    border-color: #33333300;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para la barra desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    padding: 5px 10px;
+    background-color: hwb(39 21% 4%);
+    border-color: #33333300;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5b236;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #12203A;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-box {
+    width: 36%;
+    border: 1px solid #cccccc00;
+    padding: 10px;
+    background-color: #cccccc4b;
+    border-radius: 3dvh;
+}
+
+
+
+.evento {
+    width: 58%;
+    border: 1px solid #cccccc00;
+    padding: 10px;
+    border-radius: 3dvh;
+    background-color:  #cccccc4b;
+}
+.evento h1{
+    text-align: center;
+    color: #f5b236;
+}
+.evento p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Estilo para ocultar elementos inicialmente y aplicar otras propiedades */
+
+.evento-item {
+    display: flex; /* Para que los elementos se muestren en línea */
+    justify-content: space-between; /* Alinea los elementos al principio y al final */
+    align-items: center; /* Centra verticalmente los elementos dentro de .evento-item */
+    width: 100%;
+    border: 1px solid #cccccc00;
+    padding: 2px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 3vh;
+}
+
+/* Estilo para ocultar elementos inicialmente */
+.evento-item p,
+.evento-item .boton {
+    display: none;
+}
+
+.evento-item h2{
+    color: #ffffff;
+    text-align: center;
+}
+.evento-item:hover{
+    background-color: #f5b236;
+}
+.evento-item:hover h2{
+color:  #ffffff;
+}
+
+/* Estilo para mostrar elementos en el hover */
+.evento-item:hover p{
+    display:block;
+    color: #f1f1f1;
+}
+.evento-item:hover .boton {
+    display: block;
+    background-color: #12203A;
+    border-radius: 9px; /* Cambié '5dvh' a '5px' para que sea válido */
+    color: white;
+    padding: 8px 15px; /* Reduje el padding para reducir el espacio */
+    margin: 3px; /* Puedes ajustar el valor de margen según tus preferencias */
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.containere {
+    display: flex;
+    flex-direction: column;
+    border-radius: 3dvh;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.containere h1 {
+    text-align: center;
+    color: #f5b236;
+}
+
+.containere h2{
+    text-align: center;
+    color: #f5b236;
+}
+.contact {
+    display: flex; /* Para que los elementos se muestren en línea */
+    align-items: center; /* Centra verticalmente los elementos dentro de .contact */
+    width: 100%;
+    border: 1px solid #cccccc00;
+    padding: 05px; /* Cambiado de 01px a 10px */
+    margin: 07px 0;
+    cursor: pointer;
+    border-radius: 3dvh;
+}
+
+.contact h2{
+    text-align: center;
+    color: #ffffff;
+}
+.contact:hover {
+    background-color: #f5b236;
+    
+}
+
+.contact img {
+    max-width: 50px; /* Ajusta el ancho máximo de la imagen a tu preferencia */
+    border-radius: 02dvb;
+    padding: 05px; /* Cambiado de 01px a 10px */
+    margin: 07px 0;
+}
+
+.contact-details {
+    display: none;
+    padding: 05px; /* Cambiado de 01px a 10px */
+    margin: 07px 0;
+}
+-----------------------------------
+footer{
+    background: rgb(0,0,0);
+    position: relative;
+    width: 100%;
+    min-height: 90px;
+    padding: 1rem 0rem;
+}
+.containerfooter {
+   max-width: 900px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.row{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.col{
+   min-width: 250px;
+   color: #fff;
+   font-family: poppins;
+   padding:0 2rem;
+}
+.col .logo{
+   width: 125px;
+   margin-bottom:0px;
+}
+.col h3{
+   color:#a2b1ce;
+   margin-bottom: 20px;
+   position: relative;
+   cursor: pointer;
+}
+.col h3::after{
+   content: '';
+   height:3px;
+   width:0px;
+   background-color: #f5b236;
+   position: absolute;
+   bottom: 0;
+   left:0;
+   transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+   width:30px
+}
+.col .social a i{
+   color:#f5b236;
+   margin-top:2rem;
+   margin-right: 5px;
+   transition: 0.3s ease;
+}
+.col .social a i:hover{
+   transform: scale(1.5);
+   filter:grayscale(25);
+}.col h3{
+   color:#a2b1ce;
+   margin-bottom: 20px;
+   position: relative;
+   cursor: pointer;
+}
+.col h3::after{
+   content: '';
+   height:3px;
+   width:0px;
+   background-color: #f5b236;
+   position: absolute;
+   bottom: 0;
+   left:0;
+   transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+   width:30px;
+}
+.col .social a i{
+   color:#f5b236;
+   margin-top:2rem;
+   margin-right: 5px;
+   transition: 0.3s ease;
+}
+.col .social a i:hover{
+   transform: scale(1.5);
+   filter:grayscale(25);
+}
+.col .links a{
+   display: block;
+   text-decoration: none;
+   color:#fff;
+   margin-bottom: 5px;
+   position: relative;
+   transition: 0.3s ease;
+}
+.col .links a::before{
+   content:'';
+   height: 16px;
+   width:3px;
+   position: absolute;
+   top:5px;
+   left:-10px;
+   background-color: #1e67ee;
+   transition: 0.s ease;
+   opacity: 0;
+}
+.col .links a:hover::before{
+   opacity: 1;
+}
+.col .links a:hover{
+   transform: translateX(-8px);
+   color:#f5b236;
+}
+.col .contact-details{
+   display: inline-flex;
+   justify-content: space-between;
+}
+.col .contact-details i{
+   margin-right:15px;
+}
+    /* Consulta de medios para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .circle img {
+        max-width: 100%; /* Haz que las imágenes dentro de .circle ocupen el 100% del ancho */
+        max-height: auto;
+    }
+
+    .circle h3 {
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .circle-container {
+        flex-direction: column;
+    }
+
+    .contact-box,
+    .evento {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+
+    .col {
+        min-width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        padding: 0 1rem; /* Espaciado reducido en pantallas pequeñas */
+    }
+}

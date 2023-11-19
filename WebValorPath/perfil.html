@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <style>
+        /* Estilos generales */
+        body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(.../fotos/veteranos.jpg);
+    margin: 0; /* Añadido para quitar el margen predeterminado del body */
+}
+
+.profile {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    display: block;
+    border-radius: 6px;
+    border-color: #ccc;
+    background-color: #dde0f18a;
+    width: 80%; /* Ajuste del ancho máximo para pantallas más pequeñas */
+
+    /* Añadido para centrar en pantallas más pequeñas */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+button {
+    padding: 10px;
+    background-color: #3a57fa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2c47d7;
+}
+.profile img {
+    width: 80px;
+    height: 80px;
+}
+
+#editForm {
+    display: none;
+    position: absolute;
+    top: 100%; /* Situar el formulario debajo del perfil */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Ancho del formulario ajustado */
+    max-width: 400px;
+    margin-top: 20px; /* Espacio entre el perfil y el formulario */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho del formulario */
+}
+
+#editForm h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#editForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#editForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#editForm input,
+#editForm textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#editForm button {
+    padding: 10px;
+    background-color: #3a57fa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1; /* Hace que los botones se expandan para llenar el contenedor */
+    margin-right: 5px; /* Espacio entre los botones */
+}
+
+#editForm button:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último botón */
+}
+
+#editForm button:hover {
+    background-color: #2c47d7;
+}
+/* Reglas de medios para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .profile {
+        width: 90%;
+    }
+
+    #editForm {
+        width: 90%;
+    }
+}
+
+/* Reglas de medios para pantallas medianas (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .profile {
+        width: 70%;
+    }
+
+    #editForm {
+        width: 70%;
+    }
+}
+
+/* Reglas de medios para pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .profile {
+        width: 60%;
+    }
+
+    #editForm {
+        width: 60%;
+    }
+}
+
+ 
+    </style>
+</head>
+<body>
+    
+    <div class="profile">
+        <img src="fotos/Testimonio1.jpg" alt="Foto de perfil">
+        <h1 id="userName">Tu Nombre</h1>
+        <p id="userDescription">Descripción breve sobre ti.</p>
+        <div class="info">
+            <p><strong>Ubicación:</strong> <span id="userLocation">Ciudad, País</span></p>
+            <p><strong>Correo electrónico:</strong> <span id="userEmail">correo@ejemplo.com</span></p>
+            <p><strong>Redes sociales:</strong> <a href="#">Twitter</a>, <a href="#">Facebook</a></p>
+        </div>
+        <button onclick="editProfile()">Editar</button>
+    </div>
+
+    <div id="editForm" style="display: none;">
+        <h2>Editar Perfil</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            <p></p>
+            <label for="description">Descripción:</label>
+            <textarea id="description"></textarea>
+            <p></p>
+            <label for="location">Ubicación:</label>
+            <input type="text" id="location">
+            <p></p>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email">
+            <p></p>
+            <button type="submit" onclick="saveProfile(event)">Guardar</button>
+            <button type="button" onclick="cancelEdit()">Cancelar</button>
+        </form>
+    </div>
+
+    <script>
+        function editProfile() {
+            const profileData = document.querySelectorAll('#userName, #userDescription, #userLocation, #userEmail');
+            const editForm = document.getElementById('editForm');
+            const formInputs = editForm.querySelectorAll('input, textarea');
+
+            for (let i = 0; i < profileData.length; i++) {
+                formInputs[i].value = profileData[i].textContent;
+            }
+
+            editForm.style.display = 'block';
+            document.querySelector('.profile button').style.display = 'none';
+        }
+
+        function saveProfile(event) {
+            event.preventDefault();
+            const profileData = document.querySelectorAll('#userName, #userDescription, #userLocation, #userEmail');
+            const formInputs = document.querySelectorAll('#name, #description, #location, #email');
+            const editForm = document.getElementById('editForm');
+
+            for (let i = 0; i < profileData.length; i++) {
+                profileData[i].textContent = formInputs[i].value;
+            }
+
+            editForm.style.display = 'none';
+            document.querySelector('.profile button').style.display = 'block';
+        }
+
+        function cancelEdit() {
+            const editForm = document.getElementById('editForm');
+            editForm.style.display = 'none';
+            document.querySelector('.profile button').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

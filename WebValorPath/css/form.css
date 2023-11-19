@@ -1,0 +1,190 @@
+/* Importación de fuentes de Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+body {
+    font-family: 'calibri';
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../fotos/veteranos.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .contact_form {
+    width: 90%;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+    padding: 5%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    height: 100px;
+    padding-top: 15px;
+    font-family: 'calibri';
+  }
+  
+  label {
+    display: block;
+  }
+  
+  button {
+    text-decoration: none;
+    width: 100%;
+    height: 5vh;
+    border-radius: 5vw;
+    background: transparent;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid white;
+    margin-bottom: 2%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button p {
+    color: #fff;
+  }
+  
+  span {
+    color: #faf3f8;
+  }
+  
+  .aviso {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #fff9f9;
+  }
+  
+  p {
+    font-size: 14px;
+    font-family: 'calibri';
+    color: #ffffff;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #a8a8a8;
+  }
+  
+  ::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+  }
+  
+  .formulario input:focus,
+  .formulario textarea:focus {
+    outline: 0;
+    color: #fff9f9;
+    font-family: 'calibri';
+    border: 1px solid #313131;
+  }
+  
+  /* Media query para pantallas con un ancho máximo de 480px (móviles) */
+  @media screen and (max-width: 480px) {
+    .contact_form {
+      width: 100% !important; /* Ocupar todo el ancho disponible */
+      padding: 2% !important; /* Reducir el espacio de relleno */
+    }
+  
+    p {
+      font-size: 28px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    h3 {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    p {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  }
+  @media screen and (max-width: 240px) {
+    .contact_form {
+      width: 100% !important; /* Ocupar todo el ancho disponible */
+      padding: 2% !important; /* Reducir el espacio de relleno */
+    }
+  
+    h1 {
+      font-size: 28px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    h3 {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    p {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .contact_form {
+      width: 100% !important; /* Ocupar todo el ancho disponible */
+      padding: 2% !important; /* Reducir el espacio de relleno */
+    }
+  
+    h1 {
+      font-size: 28px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    h3 {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    p {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .contact_form {
+      width: 100% !important; /* Ocupar todo el ancho disponible */
+      padding: 2% !important; /* Reducir el espacio de relleno */
+    }
+  
+    h1 {
+      font-size: 28px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    h3 {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  
+    p {
+      font-size: 14px !important; /* Reducir el tamaño de la fuente */
+    }
+  }
